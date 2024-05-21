@@ -15,7 +15,6 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .title {
@@ -33,7 +32,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #24232c;
-  padding: 0.2em 1em;
+  padding: 0.5em 1em;
 }
 
 .pw-value {
@@ -228,14 +227,14 @@ body {
 
 @media (max-width: 768px) {
   .pw-output-container {
-    font-size: 26px;
-    line-height: 32px;
-    padding: 0.25em 0.5em;
+    font-size: 24px;
+    line-height: 31px;
+    padding: 0.5em 1em;
   }
 
   .app-container {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 23px;
     padding: 0.25em 0.5em;
   }
 }
