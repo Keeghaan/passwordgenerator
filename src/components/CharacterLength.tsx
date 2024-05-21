@@ -1,4 +1,4 @@
-import { usePasswordContext } from "@/src/contexts/PasswordContext";
+import { usePasswordContext } from "../../src/contexts/PasswordContext";
 import { Slider } from "./Slider";
 
 export const CharacterLength = () => {

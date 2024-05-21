@@ -1,5 +1,7 @@
 body {
-  font-family: JetBrains mono, monospace;
+  font-family:
+    JetBrains mono,
+    monospace;
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
@@ -9,6 +11,7 @@ body {
 }
 
 .App {
+  appearance: none !important;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -73,24 +76,24 @@ body {
 .slider-container input[type="range"] {
   appearance: none;
   width: 90%;
-  height: 0.5em;
   background: #18171f;
-  transition: background-position 0.2s;
+  cursor: pointer;
 }
 
-.slider-container input[type="range"]::-moz-range-thumb {
-  border: 0.1em solid #e6e5ea;
+.slider-container input[type="range"]::-moz-range-thumb,
+.slider-container input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
   background: #e6e5ea;
-  cursor: pointer;
+  border: 0.1em solid #e6e5ea;
 }
-
-.slider-container input[type="range"]::-moz-range-thumb:active {
+.slider-container input[type="range"]::-moz-range-thumb:active,
+.slider-container input[type="range"]::-webkit-slider-thumb:active {
   border: 0.1em solid #a4ffaf;
-  background: #18171f;
-  cursor: pointer;
+  background: #a4ffaf;
 }
 
 .slider-container input[type="range"]::-moz-range-progress {
+  appearance: none;
   height: 0.4em;
   background: linear-gradient(to right, #a4ffaf, #a4ffaf);
 }
@@ -119,7 +122,7 @@ body {
 .checkbox-container label input[type="checkbox"]:checked {
   border: 0.1em solid #a4ffaf;
   background-color: #a4ffaf;
-  background-image: url("./icon-check.svg");
+  background-image: url("./images/icon-check.svg");
   background-repeat: no-repeat;
   background-position: 50%;
   cursor: pointer;
@@ -202,6 +205,10 @@ body {
 .alert {
   color: #f64a4a;
   max-width: 15em;
+}
+
+.alert-close {
+  background-color: #e6e5ea;
 }
 
 @media (max-width: 768px) {

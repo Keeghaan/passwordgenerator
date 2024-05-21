@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { CaracteristicsModel, ProviderProps } from "@/src/utils/types";
+import { CaracteristicsModel, ProviderProps } from "../../src/utils/types";
 
 type PasswordContextType = {
   value: string;

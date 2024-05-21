@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { usePasswordContext } from "@/src/contexts/PasswordContext";
-import { StrengthLevelModel } from "@/src/utils/types";
+import { usePasswordContext } from "../../src/contexts/PasswordContext";
+import { StrengthLevelModel } from "../../src/utils/types";
 import { StrengthLevelBar } from "./StrengthLevelBar";
 
 export const Strength = () => {
   const { caracteristics } = usePasswordContext();
   const [level, setLevel] = useState<StrengthLevelModel>(
-    caracteristics.strength
+    caracteristics.strength,
   );
 
   useEffect(() => {

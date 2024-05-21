@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { usePasswordContext } from "@/src/contexts/PasswordContext";
+import { usePasswordContext } from "../../src/contexts/PasswordContext";
 
 type CheckboxProps = {
   label: string;
