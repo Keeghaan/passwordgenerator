@@ -18,8 +18,12 @@ export const Strength = () => {
   return (
     <div className="strength-container">
       <span className="strength-text">STRENGTH</span>
-      <div className={`strength-level ${!level ? "strength-level-none" : ""} `}>
-        {level !== 0 ? StrengthLevelModel[level] : "(^-^)"}
+      <div className="strength-level">
+        <span
+          className={`strength-level-text ${!level ? "strength-level-none" : ""} `}
+        >
+          {level !== 0 ? StrengthLevelModel[level] : "(^-^)"}
+        </span>
         <StrengthLevelBar level={level} />
       </div>
     </div>

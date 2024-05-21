@@ -29,9 +29,8 @@ export default function App() {
   const handleCopy = () => {
     navigator.clipboard
       .writeText(value)
-      .then(() => console.log("Text copied successfully"))
+      .then(() => setCopied(true))
       .catch((err) => console.error("Failed to copy text: ", err));
-    setCopied(true);
   };
 
   return (

@@ -17,8 +17,8 @@ export const CheckBox = ({ value, label, error, setError }: CheckboxProps) => {
     if (updated) {
       let newStrength = caracteristics.strength;
       if (checked) {
-        newStrength++;
-      } else if (newStrength > 0) newStrength--;
+        if (value !== 1) newStrength++;
+      } else if (newStrength > 1) newStrength--;
       setCaracteristics({ ...caracteristics, strength: newStrength });
       setUpdated(false);
     }
