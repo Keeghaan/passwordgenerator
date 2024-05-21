@@ -11,11 +11,19 @@ body {
 }
 
 .App {
-  appearance: none !important;
+  appearance: none;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  margin-top: 5em;
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  line-height: 23px;
+  color: #817d92;
 }
 
 .pw-output-container {
@@ -25,7 +33,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #24232c;
-  padding: 0.5em 1em;
+  padding: 0.2em 1em;
 }
 
 .pw-value {
@@ -37,21 +45,17 @@ body {
 }
 
 .pw-copy {
-  display: flex;
-  justify-content: row;
   color: #a4ffaf;
 }
 
 .pw-copied {
+  font-size: 18px;
+  line-height: 23px;
   padding: 0 0.8em;
 }
 
 .pw-logo {
   cursor: pointer;
-}
-
-.pw-logo:hover {
-  color: #e6e5ea;
 }
 
 .app-container {
@@ -76,25 +80,26 @@ body {
 .slider-container input[type="range"] {
   appearance: none;
   width: 90%;
+  height: 0.5em;
   background: #18171f;
   cursor: pointer;
 }
 
-.slider-container input[type="range"]::-moz-range-thumb,
-.slider-container input[type="range"]::-webkit-slider-thumb {
+.slider-container input[type="range"]::-moz-range-thumb {
   appearance: none;
+  width: 1.5em;
+  height: 1.5em;
   background: #e6e5ea;
   border: 0.1em solid #e6e5ea;
+  border-radius: 50%;
 }
-.slider-container input[type="range"]::-moz-range-thumb:active,
-.slider-container input[type="range"]::-webkit-slider-thumb:active {
+.slider-container input[type="range"]::-moz-range-thumb:active {
   border: 0.1em solid #a4ffaf;
-  background: #a4ffaf;
+  background-color: #24232c;
 }
 
 .slider-container input[type="range"]::-moz-range-progress {
-  appearance: none;
-  height: 0.4em;
+  height: 0.5em;
   background: linear-gradient(to right, #a4ffaf, #a4ffaf);
 }
 
@@ -119,6 +124,10 @@ body {
   cursor: pointer;
 }
 
+.checkbox-container label input[type="checkbox"]:hover {
+  border: 0.1em solid #a4ffaf;
+}
+
 .checkbox-container label input[type="checkbox"]:checked {
   border: 0.1em solid #a4ffaf;
   background-color: #a4ffaf;
@@ -138,8 +147,14 @@ body {
 }
 
 .strength-text {
+  font-size: smaller;
   margin-right: 2em;
+  padding: 2em auto;
   color: #817d92;
+}
+
+.strength-level-text {
+  padding-right: 0.25em;
 }
 
 .strength-level-none {
@@ -148,12 +163,11 @@ body {
 
 .rectangle {
   display: inline-block;
-  width: 0.2em;
-  height: 0.7em;
+  width: 0.25em;
+  height: 1em;
   border: 0.01em solid #e6e5ea;
   background-color: #24232c;
   margin-left: 0.2em;
-  text-align: right;
 }
 
 .tooweak-rect {
@@ -185,6 +199,7 @@ body {
   border: 0.1em solid #a4ffaf;
   width: 90%;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .generate-text {
@@ -212,11 +227,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .title {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .pw-output-container {
     font-size: 26px;
     line-height: 32px;
