@@ -3,7 +3,6 @@ import iconSubmit from "../../src/images/icon-arrow-right.svg";
 import React, { useEffect } from "react";
 
 type GenerateButtonProps = {
-  error: boolean;
   setError: React.Dispatch<React.SetStateAction<boolean>>;
   setErrorMsg: React.Dispatch<React.SetStateAction<string>>;
   value: string;
@@ -13,7 +12,6 @@ type GenerateButtonProps = {
 };
 
 export const GenerateButton = ({
-  error,
   setError,
   setErrorMsg,
   value,
@@ -41,10 +39,21 @@ export const GenerateButton = ({
         j = 0;
       }
     });
-    if (caracteristics.length < 8 || !characters.length) {
-      setErrorMsg(
-        "To be generated, the password need a length of 8 minimum and at least one restriction.",
-      );
+    let restrictions = 0;
+    for (let car in caracteristics) {
+      if (car !== "strength" && car !== "length") {
+        if (caracteristics[car]) restrictions++;
+      }
+    }
+    if (caracteristics.length < restrictions || !characters.length) {
+      if (!caracteristics.length)
+        setErrorMsg("A 0 length password cannot be generated.");
+      else if (!characters.length)
+        setErrorMsg("At least one restriction expected.");
+      else if (restrictions > caracteristics.length)
+        setErrorMsg(
+          `Cannot include all the restrictions in a less than ${caracteristics.length} letters password.`,
+        );
       setError(true);
     } else {
       if (characters.length) {

@@ -81,7 +81,6 @@ export default function App() {
           </span>
           <Strength />
           <GenerateButton
-            error={error}
             setError={setError}
             setErrorMsg={setErrorMsg}
             value={value}
