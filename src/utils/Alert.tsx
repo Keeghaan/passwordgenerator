@@ -12,9 +12,6 @@ export const Alert = ({ setError, msg }: AlertProps) => {
   return (
     <div className="alert-container">
       <span className="alert">
-        <button className="alert-close" onClick={handleClose}>
-          &times;
-        </button>
         <div className="alert-msg">{msg}</div>
       </span>
     </div>
