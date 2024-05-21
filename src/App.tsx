@@ -5,7 +5,7 @@ import { GenerateButton } from "./components/GenerateButton";
 import { Strength } from "./components/Strength";
 import { usePasswordContext } from "./contexts/PasswordContext";
 import "./styles.css";
-import iconCopy from "@/src/images/icon-copy.svg";
+import iconCopy from "./images/icon-copy.svg";
 import { Alert } from "./utils/Alert";
 
 export default function App() {

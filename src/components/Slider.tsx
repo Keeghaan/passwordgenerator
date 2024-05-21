@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { usePasswordContext } from "@/src/contexts/PasswordContext";
+import { usePasswordContext } from "../../src/contexts/PasswordContext";
 
 type SliderProps = {
   value: number;

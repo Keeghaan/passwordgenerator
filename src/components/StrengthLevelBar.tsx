@@ -1,4 +1,4 @@
-import { StrengthLevelModel } from "@/src/utils/types";
+import { StrengthLevelModel } from "../../src/utils/types";
 
 type StrengthLevelBarProps = {
   level: StrengthLevelModel;

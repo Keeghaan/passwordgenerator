@@ -1,5 +1,5 @@
-import { usePasswordContext } from "@/src/contexts/PasswordContext";
-import iconSubmit from "@/src/images/icon-arrow-right.svg";
+import { usePasswordContext } from "../../src/contexts/PasswordContext";
+import iconSubmit from "../../src/images/icon-arrow-right.svg";
 import React, { useEffect } from "react";
 
 type GenerateButtonProps = {
@@ -43,7 +43,7 @@ export const GenerateButton = ({
     });
     if (caracteristics.length < 8 || !characters.length) {
       setErrorMsg(
-        "To be generated, the password need a length of 8 minimum and at least one restriction."
+        "To be generated, the password need a length of 8 minimum and at least one restriction.",
       );
       setError(true);
     } else {
